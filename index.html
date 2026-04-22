@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INGEOCO S.A.S.</title>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo img {
+  height: 55px;
+  object-fit: contain;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #111;
+}
+
+/* HERO */
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(10,31,68,0.6), rgba(10,31,68,0.6)),
+              url('https://images.unsplash.com/photo-1581092919537-9c5b2b3f4f5c');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: #d96b1f;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.sub {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+h2 {
+  font-size: 2em;
+}
+
+.card strong {
+  font-size: 1.5em;
+  color: #d96b1f;
+}
+/* PROJECT */
+.project {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+
+.project:hover .overlay {
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  background: #0A1F44;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+  <img src="logo.png" alt="INGEOCO">
+  </div>
+  <div>
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#clientes">Clientes</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <h1>Soluciones firmes, incluso en los escenarios más exigentes</h1>
+    <p>Más de 10 años desarrollando proyectos geotécnicos con precisión y compromiso.</p>
+    <button class="btn">Solicitar asesoría</button>
+  </div>
+</header>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <p class="sub">Soluciones integrales en ingeniería</p>
+  <div class="grid">
+    <div class="card">Construcción</div>
+    <div class="card">Interventoría</div>
+    <div class="card">Estudios geotécnicos</div>
+    <div class="card">Consultoría y diseños</div>
+    <div class="card">Formulación de proyectos</div>
+    <div class="card">Asesorías técnicas</div>
+    <div class="card">Control de calidad</div>
+  </div>
+</section>
+  <h2>¿Por qué elegirnos?</h2>
+  <p class="sub">
+    Más que ingeniería, ofrecemos confianza, cumplimiento y soluciones reales en escenarios exigentes.
+  </p>
+  <div class="grid">
+    <div class="card">✔ Experiencia en proyectos complejos</div>
+    <div class="card">✔ Cumplimiento en tiempos y resultados</div>
+    <div class="card">✔ Equipo humano comprometido</div>
+    <div class="card">✔ Capacidad de respuesta inmediata</div>
+    <div class="card">✔ Soluciones técnicas eficientes</div>
+    <div class="card">✔ Innovación aplicada en cada proyecto</div>
+  </div>
+</section>
+<section id="proyectos">
+  <h2>Experiencia en proyectos</h2>
+  <p class="sub">
+    Participación técnica en proyectos de infraestructura, aportando en estudios, diseños, control de calidad y asesoría especializada.
+  </p>
+
+  <div class="grid">
+    
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+      <div class="overlay">
+        Ampliación Avenida Circunvalar – Barranquilla<br>
+        Participación en componente técnico y soporte en obra.
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+      <div class="overlay">
+        Barrios a la Obra – Módulo VIII<br>
+        Apoyo en procesos técnicos y desarrollo del proyecto.
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+      <div class="overlay">
+        Vía El Delirio – Puerto Viejo<br>
+        Participación en estudios y acompañamiento técnico.
+      </div>
+    </div>
+  </section>
+  <h2>Nuestra experiencia</h2>
+  <div class="grid">
+    <div class="card"><strong>+10 años</strong><br>Experiencia en ingeniería</div>
+    <div class="card"><strong>+50 proyectos</strong><br>Ejecutados con éxito</div>
+    <div class="card"><strong>100%</strong><br>Cumplimiento</div>
+    <div class="card"><strong>Alta exigencia</strong><br>En cada obra</div>
+  </div>
+</section>
+<section id="clientes">
+  <h2>Clientes</h2>
+  <div class="grid">
+    <div class="card">CONTECSA</div>
+    <div class="card">EL POBLADO</div>
+    <div class="card">SIL SOLUCIONES</div>
+    <div class="card">SERCIMEC</div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p class="sub">Estamos listos para tu próximo proyecto</p>
+</section>
+  <h2>Confianza que se construye con resultados</h2>
+  <p class="sub">
+    En INGEOCO S.A.S. entendemos que cada proyecto es un reto. Por eso respondemos con experiencia, criterio técnico y compromiso real.
+  </p>
+</section>
+<footer>
+  <p>© INGEOCO S.A.S.</p>
+</footer>
+
+</body>
+</html>
