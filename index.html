@@ -20,21 +20,18 @@ img {
     body {
   overflow-x: hidden;
 }
-    * {
-  outline: 1px solid red;
-}
 /* NAVBAR */
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(255,255,255,0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* 🔥 ajustado */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav img {
@@ -91,10 +88,17 @@ header {
 
 /* SECCIONES */
 
-    .container {
+    .nav {
+  padding: 10px 0;
+}
+
+.nav-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h2 {
@@ -244,7 +248,10 @@ footer {
 
 <!-- CONTACTO -->
 <section class="contacto">
-  <div class="container">
+  <div class="container"><nav>
+     <!-- logo + menú -->
+  </div>
+</nav>
     <h2>Contacto</h2>
     <p>Estamos listos para tu próximo proyecto</p>
     <a href="https://wa.me/573008034367" class="btn" target="_blank">
