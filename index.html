@@ -5,7 +5,6 @@
   <title>INGEOCO S.A.S</title>
 
   <style>
-    /* RESET */
     * {
       margin: 0;
       padding: 0;
@@ -45,15 +44,15 @@
 
     /* HERO */
     .hero {
-  height: 80vh;
-  background: linear-gradient(rgba(13,35,64,0.7), rgba(13,35,64,0.7)),
-              url("tu-imagen.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
+      height: 80vh;
+      background: linear-gradient(rgba(13,35,64,0.7), rgba(13,35,64,0.7)),
+                  url("tu-imagen.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
 
     .hero h1 {
       font-size: 40px;
@@ -72,11 +71,6 @@
       color: white;
       border-radius: 25px;
       text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #b86424;
     }
 
     /* SECCIONES */
@@ -86,11 +80,11 @@
     }
 
     .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-    
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     h2 {
       margin-bottom: 20px;
     }
@@ -108,11 +102,6 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
     }
 
     /* CONTACTO */
@@ -127,22 +116,31 @@
       text-align: center;
       padding: 15px;
     }
-
   </style>
 </head>
 
 <body>
 
- <nav>...</nav>
+  <!-- NAV -->
+  <nav>
+    <div><strong>INGEOCO</strong></div>
+    <div>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
 
-<section class="hero">...</section>
-<section id="servicios">...</section>
-<section id="proyectos">...</section>
-<section id="clientes">...</section>
-<section id="contacto">...</section>
-<footer>...</footer>
-  <body>
-    
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Ingeniería que responde cuando el proyecto más lo exige</h1>
+      <p>Soluciones geotécnicas con más de 10 años de experiencia</p>
+      <a href="#contacto" class="btn">Solicitar asesoría</a>
+    </div>
+  </section>
+
   <!-- SERVICIOS -->
   <section id="servicios">
     <div class="container">
@@ -181,19 +179,21 @@
   </section>
 
   <!-- CONTACTO -->
- <section id="contacto" class="contacto">
-  <div class="container">
-    <h2>Contacto</h2>
-    <p>Estamos listos para tu próximo proyecto</p>
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Estamos listos para tu próximo proyecto</p>
+      <br>
+      <a href="https://wa.me/573008034367" target="_blank" class="btn">
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
 
-    <a href="https://wa.me/573008034367" target="_blank" class="btn">
-      Escríbenos por WhatsApp
-    </a>
-  </div>
-</section>
-  
   <!-- FOOTER -->
   <footer>
     © 2026 INGEOCO S.A.S - Ingeniería Geotécnica
   </footer>
 
+</body>
+</html>
