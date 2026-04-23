@@ -12,9 +12,8 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
-  color: #111;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -51,15 +50,19 @@ nav a:hover {
 /* div class */
 header {
   height: 100vh;
-  background: linear-gradient(rgba(10,31,68,0.7), rgba(10,31,68,0.7)),
+  background: linear-gradient(rgba(10,31,68,0.3), rgba(10,31,68,0.3)),
               url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
   background-size: cover;
   background-position: center;
 }
-
+.hero {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
 .hero h1 {
   font-size: 3em;
-  margin-bottom: 20px;
 }
 
 .hero p {
@@ -174,13 +177,14 @@ footer {
   <div class="hero">
     <h1>Ingeniería que responde cuando el proyecto más lo exige</h1>
     <p>Soluciones geotécnicas, consultoría y control de calidad con más de 10 años de experiencia.</p>
-    <a href="https://wa.me/57TU_573008034367" class="btn">Solicitar asesoría</a>
+ <a href="https://wa.me/573001234567?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" target="_blank" class="btn">
+  Solicitar asesoría
+</a>
     <p style="margin-top:20px; opacity:0.8;">
       Más de 10 años | Proyectos en Atlántico y Sucre | Empresas reconocidas
     </p>
   </div>
 </header>
-
 <section id="servicios">
   <h2>Servicios</h2>
   <p class="sub">Soluciones integrales en ingeniería</p>
@@ -260,6 +264,10 @@ footer {
 <section id="contacto">
   <h2>Contacto</h2>
   <p class="sub">Estamos listos para tu próximo proyecto</p>
+
+  <div style="text-align:center; margin-top:30px;">
+    <a href="https://wa.me/57300XXXXXXX" class="btn">Escríbenos por WhatsApp</a>
+  </div>
 </section>
   <h2>Confianza que se construye con resultados</h2>
   <p class="sub">
