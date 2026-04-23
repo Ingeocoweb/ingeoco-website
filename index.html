@@ -1,266 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INGEOCO S.A.S.</title>
+  <meta charset="UTF-8">
+  <title>INGEOCO S.A.S</title>
 
-<style>
-
-/* RESET */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  <style>
+    /* RESET */
     body {
-  overflow-x: hidden;
-}
-/* NAVBAR */
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(255,255,255,0.95);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; /* 🔥 ajustado */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-nav img {
-    height: 50px;
-}
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
 
-nav div {
-    display: flex;
-    gap: 20px;
-}
+    nav a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: #333;
+      font-weight: bold;
+    }
 
-nav a {
-    text-decoration: none;
-    color: #111;
-    font-weight: 500;
-}
-
-/* HEADER */
-header {
-    height: 100vh;
-    background: linear-gradient(rgba(10,31,68,0.6), rgba(10,31,68,0.6)),
-    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero {
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 3em;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-/* BOTÓN */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 30px;
-    background: #d96b1f;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-/* SECCIONES */
-
-    .nav {
-  padding: 10px 0;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-}
-
-/* TARJETAS */
-.card {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* PROYECTOS */
-.project {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.project img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    width: 100%;
-    padding: 15px;
-}
-
-/* FOOTER */
-footer {
-    background: #0A1F44;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-/* CONTACTO PRO */
-.contacto {
-  width: 100%;
-  padding: 100px 20px;
-  background: #f9f9f9;
-}
-
-.contacto-content {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
     body {
-  overflow-x: hidden;
-}
-</style>
+      padding-top: 70px;
+    }
+
+    /* HERO */
+    .hero {
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8c0c9b0d39') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #d67a2f;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* CONTACTO */
+    .contacto {
+      background: #f9f9f9;
+    }
+
+    .contacto-content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d2340;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-    <img src="logo.png" alt="INGEOCO">
+  <!-- NAV -->
+  <nav>
+    <div><strong>INGEOCO</strong></div>
     <div>
-        <a href="#servicios">Servicios</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contacto">Contacto</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto">Contacto</a>
     </div>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<header>
-    <div class="hero">
-        <h1>Ingeniería que responde cuando el proyecto más lo exige</h1>
-        <p>Soluciones geotécnicas, consultoría y control de calidad con más de 10 años de experiencia.</p>
-
-        <a href="https://wa.me/573008034367" target="_blank" class="btn">
-            Solicitar asesoría
-        </a>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Ingeniería que responde cuando el proyecto más lo exige</h1>
+      <p>Soluciones geotécnicas con más de 10 años de experiencia</p>
+      <a href="#contacto" class="btn">Solicitar asesoría</a>
     </div>
-</header>
+  </section>
 
-<!-- SERVICIOS -->
-<section id="servicios">
-    <h2>Servicios</h2>
-    <div class="grid">
-        <div class="card">Construcción</div>
-        <div class="card">Interventoría</div>
-        <div class="card">Estudios geotécnicos</div>
-        <div class="card">Consultoría y diseños</div>
-        <div class="card">Formulación de proyectos</div>
-        <div class="card">Asesorías técnicas</div>
-        <div class="card">Control de calidad</div>
+  <!-- CLIENTES -->
+  <section id="clientes">
+    <div class="container">
+      <h2>Clientes</h2>
+      <div class="grid">
+        <div class="card">CONTECSA SAS</div>
+        <div class="card">EL POBLADO SA</div>
+        <div class="card">SIL SOLUCIONES SAS</div>
+        <div class="card">SERCIMEC SAS</div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- PROYECTOS -->
-<section id="proyectos">
-    <h2>Experiencia en proyectos</h2>
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <div class="contacto-content">
+      <h2>Contacto</h2>
+      <p>Estamos listos para tu próximo proyecto</p>
 
-    <div class="grid">
-
-        <div class="project">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-            <div class="overlay">
-                Avenida Circunvalar – Barranquilla
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
-            <div class="overlay">
-                Barrio a la Obra – Módulo VIII
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-            <div class="overlay">
-                Vía El Delirio – Puerto Viejo
-            </div>
-        </div>
-
+      <a href="https://wa.me/573008034367" target="_blank" class="btn">
+        Escríbenos por WhatsApp
+      </a>
     </div>
-</section>
+  </section>
 
-<!-- CLIENTES -->
-<section id="clientes">
-    <h2>Clientes</h2>
-    <div class="grid">
-        <div class="card">CONTECSA</div>
-        <div class="card">EL POBLADO</div>
-        <div class="card">SIL SOLUCIONES</div>
-        <div class="card">SERCIMEC</div>
-    </div>
-</section>
-
-<!-- CONTACTO -->
-<section class="contacto">
-  <div class="container"><nav>
-     <!-- logo + menú -->
-  </div>
-</nav>
-    <h2>Contacto</h2>
-    <p>Estamos listos para tu próximo proyecto</p>
-    <a href="https://wa.me/573008034367" class="btn" target="_blank">
-  Escríbenos por WhatsApp
-</a>
-  </div>
-</section>
-   
-<!-- FOOTER -->
-<footer>
-    © 2026 INGEOCO S.A.S. - Ingeniería Geotécnica
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 INGEOCO S.A.S - Ingeniería Geotécnica
+  </footer>
