@@ -45,8 +45,11 @@
 
     /* HERO */
     .hero {
-      height: 80vh;
-      background: linear-gradient(rgba(13,35,64,0.85), rgba(13,35,64,0.85));
+      height: 85vh;
+      background: linear-gradient(rgba(13,35,64,0.7), rgba(13,35,64,0.7)),
+                  url('https://images.unsplash.com/photo-1581094794329-c8112a89af12');
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -56,12 +59,13 @@
     }
 
     .hero h1 {
-      font-size: 38px;
+      font-size: 40px;
       margin-bottom: 15px;
     }
 
     .hero p {
       margin-bottom: 20px;
+      font-size: 18px;
     }
 
     .btn {
@@ -71,17 +75,26 @@
       color: white;
       border-radius: 25px;
       text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #b86424;
     }
 
     /* SECCIONES */
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
     }
 
     /* GRID */
@@ -94,9 +107,14 @@
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     /* CONTACTO */
@@ -132,7 +150,7 @@
   <section class="hero">
     <div>
       <h1>Ingeniería que responde cuando el proyecto más lo exige</h1>
-      <p>Soluciones geotécnicas con más de 10 años de experiencia</p>
+      <p>Soluciones geotécnicas, consultoría y control de calidad con más de 10 años de experiencia</p>
       <a href="#contacto" class="btn">Solicitar asesoría</a>
     </div>
   </section>
@@ -176,12 +194,14 @@
 
   <!-- CONTACTO -->
   <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>Estamos listos para tu próximo proyecto</p>
-    <br>
-    <a href="https://wa.me/573008034367" target="_blank" class="btn">
-      Escríbenos por WhatsApp
-    </a>
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Estamos listos para tu próximo proyecto</p>
+      <br>
+      <a href="https://wa.me/573008034367" target="_blank" class="btn">
+        Escríbenos por WhatsApp
+      </a>
+    </div>
   </section>
 
   <!-- FOOTER -->
