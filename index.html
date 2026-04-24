@@ -204,6 +204,16 @@
 .btn:hover {
   background: #a85f28;
 }
+  .animado {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
 
@@ -231,7 +241,7 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section id="servicios">
+  <section id="servicios" class="animado">
     <div class="container">
       <h2>Servicios</h2>
       <div class="grid">
@@ -246,7 +256,7 @@
   </section>
 
  <!-- PROYECTOS -->
-<section id="proyectos">
+<section id="proyectos" class="animado">
   <div class="container">
     <h2>Proyectos</h2>
 
@@ -317,7 +327,7 @@
 </section>
 
   <!-- CLIENTES -->
-  <section id="clientes">
+  <section id="clientes" class="animado">
     <div class="container">
       <h2>Clientes</h2>
       <div class="grid">
@@ -330,7 +340,7 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
+  <section id="contacto" class="animado">
     <div class="container">
       <h2>Contacto</h2>
       <p>Estamos listos para tu próximo proyecto</p>
@@ -388,7 +398,25 @@ window.onclick = (e) => {
   if (e.target == modal) modal.style.display = "none";
 };
 </script>
+<script>
+const elementos = document.querySelectorAll('.animado');
 
+function mostrarElementos() {
+  const trigger = window.innerHeight * 0.85;
+
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', mostrarElementos);
+window.addEventListener('load', mostrarElementos);
+</script>
+  
 </body>
 </html>
 </body>
