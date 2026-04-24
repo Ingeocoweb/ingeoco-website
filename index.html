@@ -181,8 +181,15 @@
 .dato {
   font-size: 13px;
   color: #888;
+  <p class="tecnico">
+  SPT: 12 - 25 golpes | Capacidad: 180 kPa
+</p>
 }
-
+.tecnico {
+  font-size: 12px;
+  color: #444;
+  margin-top: 5px;
+}
   </style>
 </head>
 
@@ -240,14 +247,14 @@
     </div>
   </div>
 
-  <h3>Ampliación Avenida Circunvalar</h3>
+  <h3>Ampliación Avenida Circunvalar - Sector Sur Occidente</h3>
 
   <p class="descripcion">
     Apoyo técnico especializado y control de calidad en obra.
   </p>
 
   <p class="dato">
-    📍 Barranquilla | 🏗️ Infraestructura vial
+    📍 Barranquilla, Atlántico | 🏗️ Infraestructura vial
   </p>
 </div>
 
@@ -337,6 +344,9 @@
     <img id="modal-img">
     <h3 id="modal-titulo"></h3>
     <p id="modal-descripcion"></p>
+<a id="btn-wsp" target="_blank" class="btn">
+  Cotizar este proyecto
+</a>
   </div>
 </div>
 
@@ -353,6 +363,9 @@ document.querySelectorAll(".proyecto").forEach(card => {
     modalImg.src = card.querySelector("img").src;
     modalTitulo.innerText = card.querySelector("h3").innerText;
     modalDesc.innerText = card.querySelector(".descripcion").innerText;
+    const texto = `Hola, estoy interesado en el proyecto: ${titulo}`;
+document.getElementById("btn-wsp").href =
+  "https://wa.me/573008034367?text=" + encodeURIComponent(texto);
   });
 });
 
