@@ -43,16 +43,19 @@
     }
 
     /* HERO */
-    .hero {
-      height: 80vh;
-      background: linear-gradient(rgba(13,35,64,0.7), rgba(13,35,64,0.7)),
-                  url("https://images.unsplash.com/photo-1581092160607-ee22731b2a5c")
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+    
+   .hero {
+  height: 80vh;
+  background: 
+    linear-gradient(rgba(13,35,64,0.85), rgba(13,35,64,0.85)),
+    url("https://images.unsplash.com/photo-1581092160607-ee22731b2a5c") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
 
     .hero h1 {
       font-size: 40px;
@@ -159,7 +162,10 @@
     <div class="container">
       <h2>Proyectos</h2>
       <div class="grid">
-        <div class="card">Proyecto 1</div>
+        <div class="card">
+  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" style="width:100%; border-radius:10px;">
+  <p>Proyecto 1</p>
+</div>
         <div class="card">Proyecto 2</div>
         <div class="card">Proyecto 3</div>
       </div>
