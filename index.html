@@ -511,50 +511,64 @@ Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del
 </footer>
 
 <!-- MODAL PROYECTOS -->
-<div id="modal" class="modal">
+<script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const modalTitulo = document.getElementById("modal-titulo");
+const modalDesc = document.getElementById("modal-descripcion");
+const cerrar = document.querySelector(".cerrar");
+
+document.querySelectorAll(".proyecto").forEach(card => {
+  card.addEventListener("click", () => {
+   modal.classList.add("activo");
+    modalImg.src = card.querySelector("img").src;
+    modalTitulo.innerText = card.querySelector("h3").innerText;
+    modalDesc.innerText = card.querySelector(".descripcion").innerText;
+    const texto = `Hola, estoy interesado en el proyecto: ${titulo}`;
+  "https://wa.me/573008034367?text=" + encodeURIComponent(texto);
+  });
+});
+
+cerrar.onclick = () => modal.style.display = "none";
+
+window.onclick = (e) => {
+  if (e.target == modal) modal.classList.remove("activo");
+};
+</script>
+  <div id="modal" class="modal">
   <div class="modal-content">
     <span class="cerrar">&times;</span>
+
     <img id="modal-img">
     <h3 id="modal-titulo"></h3>
     <p id="modal-descripcion"></p>
-<a id="btn-wsp" target="_blank" class="btn" href="#">
-  Cotizar este proyecto por WhatsApp
-</a>
+
+    <a id="btn-wsp" target="_blank" class="btn">
+      Consultar por WhatsApp
+    </a>
   </div>
 </div>
-
 <script>
-function abrirModal(titulo, descripcion, imagen, info) {
-  const modal = document.getElementById("modal");
+const elementos = document.querySelectorAll('.animado');
 
-  document.getElementById("modal-img").src = imagen;
-  document.getElementById("modal-titulo").innerText = titulo;
-  document.getElementById("modal-descripcion").innerText =
-    descripcion + " | " + info;
+function mostrarElementos() {
+  const trigger = window.innerHeight * 0.85;
 
-  const mensaje = `Hola, estoy interesado en el proyecto: ${titulo}`;
-  const numero = "573008034367";
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
 
-  document.getElementById("btn-wsp").href =
-    `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-
-  modal.classList.add("activo");
+    if (top < trigger) {
+      el.classList.add('visible');
+    }
+  });
 }
 
-// cerrar
-document.querySelector(".cerrar").onclick = () => {
-  document.getElementById("modal").classList.remove("activo");
-};
-
-window.onclick = (e) => {
-  const modal = document.getElementById("modal");
-  if (e.target === modal) {
-    modal.classList.remove("activo");
-  }
-};
+window.addEventListener('scroll', mostrarElementos);
+window.addEventListener('load', mostrarElementos);
 </script>
   
 </body>
 </html>
 </body>
 </html>
+
