@@ -402,6 +402,24 @@
   filter: grayscale(0%);
   transform: scale(1.05);
 }
+    .metricas {
+  background: #0d2340;
+  color: white;
+  text-align: center;
+}
+
+.card-metrica {
+  padding: 20px;
+}
+
+.card-metrica h2 {
+  font-size: 40px;
+  color: #d67a2f;
+}
+
+.card-metrica p {
+  font-size: 14px;
+}
   </style>
 </head>
 
@@ -673,7 +691,33 @@ Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del
     </div>
   </div>
 </section>
+<section class="metricas">
+  <div class="container">
+    <div class="grid">
 
+      <div class="card-metrica">
+        <h2 class="contador" data-target="120">0</h2>
+        <p>Proyectos ejecutados</p>
+      </div>
+
+      <div class="card-metrica">
+        <h2 class="contador" data-target="10">0</h2>
+        <p>Años de experiencia</p>
+      </div>
+
+      <div class="card-metrica">
+        <h2 class="contador" data-target="30">0</h2>
+        <p>Clientes satisfechos</p>
+      </div>
+
+      <div class="card-metrica">
+        <h2 class="contador" data-target="100">0</h2>
+        <p>% Cumplimiento</p>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- CLIENTES -->
   <section id="clientes" class="animado">
     <div class="container">
@@ -834,6 +878,30 @@ function mostrarElementos() {
 
 window.addEventListener('scroll', mostrarElementos);
 window.addEventListener('load', mostrarElementos);
+  const contadores = document.querySelectorAll('.contador');
+
+const activarContadores = () => {
+  contadores.forEach(contador => {
+    const target = +contador.getAttribute('data-target');
+    const incremento = target / 100;
+
+    let count = 0;
+
+    const actualizar = () => {
+      count += incremento;
+      if (count < target) {
+        contador.innerText = Math.floor(count);
+        requestAnimationFrame(actualizar);
+      } else {
+        contador.innerText = target;
+      }
+    };
+
+    actualizar();
+  });
+};
+
+window.addEventListener('load', activarContadores);
 </script>
   <!-- BOTÓN FLOTANTE WHATSAPP -->
 <a href="https://wa.me/573008034367" 
