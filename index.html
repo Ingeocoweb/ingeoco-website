@@ -300,6 +300,28 @@
   color: #d67a2f;
   font-size: 28px;
 }
+    .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
   </style>
 </head>
 
@@ -671,7 +693,12 @@ function mostrarElementos() {
 window.addEventListener('scroll', mostrarElementos);
 window.addEventListener('load', mostrarElementos);
 </script>
-  
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/573008034367" 
+   class="whatsapp-float" 
+   target="_blank">
+   💬
+</a>
 </body>
 </html>
 </body>
