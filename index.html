@@ -578,7 +578,57 @@ h3 {
 .nosotros-grid img {
   width: 100%;
   border-radius: 12px;
-}    
+}  
+      /* NOSOTROS PRO */
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.nosotros-texto h2 {
+  margin-bottom: 20px;
+  color: #0d2340;
+}
+
+.nosotros-texto p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.nosotros-bloques {
+  margin-top: 25px;
+}
+
+.nosotros-bloques .item {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.nosotros-bloques h4 {
+  margin-bottom: 5px;
+  color: #0d2340;
+}
+
+.nosotros-img img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+      @media (max-width: 768px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-img {
+    order: -1;
+  }
+}
   </style>
 </head>
 
@@ -631,7 +681,7 @@ h3 {
 <section class="animado">
   <div class="container">
 
-  <section class="animado nosotros">
+ <section id="nosotros" class="animado">
   <div class="container nosotros-grid">
 
     <!-- TEXTO -->
@@ -645,37 +695,36 @@ h3 {
 
       <p>
         Contamos con más de 10 años de experiencia en estudios, diseños,
-        interventoría y control de calidad, participando en proyectos de infraestructura
-        y urbanismo en la región.
+        interventoría y control de calidad, participando en proyectos de
+        infraestructura y urbanismo en la región.
       </p>
 
-      <div class="nosotros-cajas">
-
-        <div class="caja">
+      <div class="nosotros-bloques">
+        <div class="item">
           <h4>✔ Enfoque técnico</h4>
           <p>Aplicación de normativas y criterios de ingeniería en cada proyecto.</p>
         </div>
 
-        <div class="caja">
+        <div class="item">
           <h4>✔ Compromiso</h4>
           <p>Responsabilidad y precisión en cada fase constructiva.</p>
         </div>
 
-        <div class="caja">
+        <div class="item">
           <h4>✔ Experiencia</h4>
           <p>Participación en múltiples proyectos de infraestructura.</p>
         </div>
-
       </div>
     </div>
 
     <!-- IMAGEN -->
     <div class="nosotros-img">
-     <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" alt="Ingeniería">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop" alt="Ingeniería civil">
     </div>
 
   </div>
 </section>
+
 
   <!-- SERVICIOS -->
   <div style="text-align:center; margin-top:20px;">
