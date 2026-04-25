@@ -180,6 +180,9 @@
 .dato {
   font-size: 13px;
   color: #888;
+  <p class="tecnico">
+  SPT: 12 - 25 golpes | Capacidad: 180 kPa
+</p>
 }
 .tecnico {
   font-size: 13px;
@@ -253,51 +256,6 @@
   margin-top: 40px;
   color: #0d2340;
 }
-  .detalle {
-  font-size: 13px;
-  color: #555;
-  margin-top: 8px;
-  line-height: 1.5;
-}
-  .resultado {
-  font-size: 13px;
-  color: #0d2340;
-  font-weight: bold;
-  margin-top: 5px;
-}
-  .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  max-width: 500px;
-  width: 90%;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.modal-content img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.cerrar {
-  float: right;
-  cursor: pointer;
-  font-size: 20px;
-}
   </style>
 </head>
 
@@ -326,7 +284,9 @@
 
   <!-- SERVICIOS -->
   <section id="servicios" class="animado">
-       <div class="grid">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="grid">
         <div class="card">Construcción</div>
         <div class="card">Interventoría</div>
         <div class="card">Formulación de proyectos</div>
@@ -339,18 +299,42 @@
 
  <!-- PROYECTOS -->
 <section id="proyectos" class="animado">
-   
-     <div class="grid">
-  
+   <div class="container">
+
+    <h2>Proyectos</h2>
+
+    <!-- EJECUTADOS -->
+    <h3>Proyectos Ejecutados</h3>
+    <div class="grid">
+      <!-- tus cards actuales -->
+    </div>
+
+    <!-- APOYO -->
+    <h3>Apoyo Técnico y Supervisión</h3>
+    <div class="grid">
+      <!-- puedes duplicar estructura -->
+    </div>
+
+    <!-- ESTUDIOS -->
+    <h3>Estudios y Diseños</h3>
+    <div class="grid">
+      <!-- más proyectos -->
+    </div>
+
+  </div>
+</section>
+  <div class="container">
+    <h2>Proyectos</h2>
+
+    <div class="grid">
+
     <!-- Proyecto 1 -->
 <div class="card proyecto"
-     onclick="abrirModal(
-       'Ampliación Avenida Circunvalar',
-       'Estudios, diseños, control de calidad y supervisión técnica en obra civil.',
-       'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77',
-       'Barranquilla - Infraestructura vial'
-     )">
-     <div class="img-container">
+     data-titulo="Ampliación Avenida Circunvalar"
+     data-img="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77"
+     data-desc="Estudios, diseños, control de calidad y supervisión técnica en obra civil"
+     data-wsp="Hola, quiero información sobre la Ampliación Avenida Circunvalar">
+  <div class="img-container">
     <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=800&auto=format&fit=crop">
     <div class="overlay">
       <span>Ver detalles</span>
@@ -363,14 +347,6 @@
   <p class="dato">
     📍 Barranquilla, Atlántico | 🏗️ Infraestructura vial
   </p>
-   <p class="detalle">
-    ✔ Control de calidad ensayos de materiales (suelos, pavimentos, concretos y asfalto)<br>
-    ✔ Estudios y diseños infraestructura general (topografía,suelos, estructural, hidraulico, geometrico)<br>
-    ✔ Supervisión de procesos constructivos
-  </p>
-  <p class="resultado">
-  Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad de ejecución del proyecto.
-</p>
   <a href="https://wa.me/573008034367?text=Hola,%20quiero%20información%20sobre%20la%20Ampliación%20Avenida%20Circunvalar"
    target="_blank"
    class="btn">
@@ -380,13 +356,11 @@
 
 <!-- Proyecto 2 -->
 <div class="card proyecto"
-     onclick="abrirModal(
-       'Barrios a la Obra Modulo VIII',
-       'Estudios, diseños, acompañamiento técnico y control de calidad.',
-       'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77',
-       'Barranquilla - Infraestructura vial'
-     )">
-    <div class="img-container">
+     data-titulo="Barrios a la Obra Módulo VIII"
+     data-img="URL_IMAGEN"
+     data-desc="Estudios, diseños, acompañamiento técnico y control de calidad"
+     data-wsp="Hola, quiero información sobre Barrios a la Obra Módulo VIII">
+  <div class="img-container">
     <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop">
     <div class="overlay">
       <span>Ver detalles</span>
@@ -399,14 +373,6 @@
   <p class="dato">
     📍 Barranquilla, Atlántico | 🧱 Obras urbanas
   </p>
-   <p class="detalle">
-    ✔ Control de calidad ensayos de materiales (suelos, pavimentos, concretos y asfalto)<br>
-    ✔ Estudios y diseños infraestructura general (topografía,suelos, estructural, hidraulico, geometrico)<br>
-    ✔ Supervisión de procesos constructivos
-  </p>
-  <p class="resultado">
-  Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad de ejecución del proyecto.
-</p>
   <a href="https://wa.me/573008034367?text=Hola,%20quiero%20información%20sobre%20la%20Barrios%20a la obra%20ModuloVIII"
    target="_blank"
    class="btn">
@@ -416,33 +382,23 @@
 
 <!-- Proyecto 3 -->
 <div class="card proyecto"
-     onclick="abrirModal(
-       'Ampliación Avenida Circunvalar',
-       'Estudios, diseños, asesorías y control de calidad.',
-       'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77',
-       'Región Caribe - Infraestructura vial'
-     )">
-    <div class="img-container">
+     data-titulo="Condominios Campestres"
+     data-img="URL_IMAGEN"
+     data-desc="Estudios, diseños, asesorías y control de calidad"
+     data-wsp="Hola, quiero información sobre Barrios a la Obra Módulo VIII">
+  <div class="img-container">
     <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop">
     <div class="overlay">
       <span>Ver detalles</span>
     </div>
   </div>
 
-  <h3>Condominios Campestres El Poblado</h3>
+  <h3>Condominios Campestres</h3>
 <p class="tecnico">Estudios, diseños, asesorías y control de calidad</p>
 
   <p class="dato">
     📍 Región Caribe | 🏡 Infraestructura general
   </p>
-   <p class="detalle">
-    ✔ Control de calidad ensayos de materiales (suelos, pavimentos, concretos y asfalto)<br>
-    ✔ Estudios y diseños infraestructura general (suelos, hidraulico, geometrico)<br>
-    ✔ Construcción de obras de estabilización y transporte de materiales
-  </p>
-  <p class="resultado">
-  Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad de ejecución del proyecto.
-</p>
   <a href="https://wa.me/573008034367?text=Hola,%20quiero%20información%20sobre%20la%20Infraestructura General%20 Condominios%20Campestres"
    target="_blank"
    class="btn">
@@ -456,7 +412,9 @@
 
   <!-- CLIENTES -->
   <section id="clientes" class="animado">
-          <div class="grid">
+    <div class="container">
+      <h2>Clientes</h2>
+      <div class="grid">
         <div class="card">CONTECSA SAS</div>
         <div class="card">EL POBLADO SA</div>
         <div class="card">SIL SOLUCIONES SAS</div>
@@ -467,6 +425,8 @@
 
   <!-- CONTACTO -->
   <section id="contacto" class="animado">
+    <div class="container">
+      <h2>Contacto</h2>
       <p>Estamos listos para tu próximo proyecto</p>
       <br>
       <a href="https://wa.me/573008034367" target="_blank" class="btn">
@@ -479,8 +439,12 @@
   <footer>
     © 2026 INGEOCO S.A.S - Ingeniería Geotécnica y Consultoría
   </footer>
+</section>  <!-- contacto -->
+
 <footer>
-  
+  ...
+</footer>
+
 <!-- MODAL PROYECTOS -->
 <div id="modal" class="modal">
   <div class="modal-content">
@@ -489,7 +453,7 @@
     <h3 id="modal-titulo"></h3>
     <p id="modal-descripcion"></p>
 <a id="btn-wsp" target="_blank" class="btn" href="#">
-  Consultar por WhatsApp
+  Cotizar este proyecto por WhatsApp
 </a>
   </div>
 </div>
@@ -518,35 +482,20 @@ window.onclick = (e) => {
   if (e.target == modal) modal.classList.remove("activo");
 };
 </script>
-  function abrirModal(titulo, descripcion, imagen, info) {
-  const modal = document.getElementById("modal");
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
 
-  document.getElementById("modal-img").src = imagen;
-  document.getElementById("modal-titulo").innerText = titulo;
-  document.getElementById("modal-descripcion").innerText =
-    descripcion + " | " + info;
+    <img id="modal-img">
+    <h3 id="modal-titulo"></h3>
+    <p id="modal-descripcion"></p>
 
-  // 🔥 WhatsApp automático
-  const mensaje = `Hola, vi el proyecto ${titulo} y quiero más información.`;
-  const numero = "573008034367"; // 
-  document.getElementById("btn-wsp").href =
-    `https://wa.me/${573008034367}?text=${encodeURIComponent(mensaje)}`;
-
-  modal.style.display = "flex";
-}
-
-// cerrar modal
-document.querySelector(".cerrar").onclick = function () {
-  document.getElementById("modal").style.display = "none";
-};
-
-window.onclick = function (e) {
-  const modal = document.getElementById("modal");
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
+    <a id="btn-wsp" target="_blank" class="btn">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</div>
+<script>
 const elementos = document.querySelectorAll('.animado');
 
 function mostrarElementos() {
