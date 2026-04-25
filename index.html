@@ -192,21 +192,22 @@
   .btn {
   display: inline-block;
   margin-top: 15px;
-  padding: 10px 20px;
-  background: #c97a3a;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #d67a2f, #a85f28);
   color: white;
+  border-radius: 30px;
   text-decoration: none;
-  border-radius: 25px;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: #a85f28;
+  transform: scale(1.05);
 }
   .animado {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
 }
 
 .animado.visible {
@@ -220,37 +221,51 @@
   .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
-
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  background: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal.activo {
-  display: block;
-  opacity: 1;
+  display: flex;
 }
 
 .modal-content {
   background: white;
-  margin: 5% auto;
-  padding: 20px;
+  padding: 25px;
   width: 90%;
   max-width: 600px;
   border-radius: 12px;
-  text-align: center;
-
-  transform: translateY(50px);
-  transition: transform 0.4s ease;
+  animation: aparecer 0.3s ease;
+  text-align: left;
 }
 
-.modal.activo .modal-content {
-  transform: translateY(0);
+@keyframes aparecer {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.cerrar {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
 }
   h3 {
   margin-top: 40px;
@@ -268,6 +283,15 @@
   color: #0d2340;
   font-weight: bold;
   margin-top: 5px;
+}
+  .card.proyecto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card.proyecto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
   </style>
 </head>
@@ -500,43 +524,36 @@ Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del
 </div>
 
 <script>
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const modalTitulo = document.getElementById("modal-titulo");
-const modalDesc = document.getElementById("modal-descripcion");
-const cerrar = document.querySelector(".cerrar");
+function abrirModal(titulo, descripcion, imagen, info) {
+  const modal = document.getElementById("modal");
 
-document.querySelectorAll(".proyecto").forEach(card => {
-  card.addEventListener("click", () => {
-   modal.classList.add("activo");
-    modalImg.src = card.querySelector("img").src;
-    modalTitulo.innerText = card.querySelector("h3").innerText;
-    modalDesc.innerText = card.querySelector(".descripcion").innerText;
-    const texto = `Hola, estoy interesado en el proyecto: ${titulo}`;
-  "https://wa.me/573008034367?text=" + encodeURIComponent(texto);
-  });
-});
+  document.getElementById("modal-img").src = imagen;
+  document.getElementById("modal-titulo").innerText = titulo;
+  document.getElementById("modal-descripcion").innerText =
+    descripcion + " | " + info;
 
-cerrar.onclick = () => modal.style.display = "none";
+  const mensaje = `Hola, estoy interesado en el proyecto: ${titulo}`;
+  const numero = "573008034367";
+
+  document.getElementById("btn-wsp").href =
+    `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+  modal.classList.add("activo");
+}
+
+// cerrar
+document.querySelector(".cerrar").onclick = () => {
+  document.getElementById("modal").classList.remove("activo");
+};
 
 window.onclick = (e) => {
-  if (e.target == modal) modal.classList.remove("activo");
+  const modal = document.getElementById("modal");
+  if (e.target === modal) {
+    modal.classList.remove("activo");
+  }
 };
 </script>
-  <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="cerrar">&times;</span>
-
-    <img id="modal-img">
-    <h3 id="modal-titulo"></h3>
-    <p id="modal-descripcion"></p>
-
-    <a id="btn-wsp" target="_blank" class="btn">
-      Consultar por WhatsApp
-    </a>
-  </div>
-</div>
-<script>
+  
 const elementos = document.querySelectorAll('.animado');
 
 function mostrarElementos() {
