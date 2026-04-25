@@ -339,9 +339,7 @@
 
  <!-- PROYECTOS -->
 <section id="proyectos" class="animado">
-   <div class="container">
-   <h2>Proyectos</h2>
-
+   
      <div class="grid">
   
     <!-- Proyecto 1 -->
@@ -458,9 +456,7 @@
 
   <!-- CLIENTES -->
   <section id="clientes" class="animado">
-    <div class="container">
-      <h2>Clientes</h2>
-      <div class="grid">
+          <div class="grid">
         <div class="card">CONTECSA SAS</div>
         <div class="card">EL POBLADO SA</div>
         <div class="card">SIL SOLUCIONES SAS</div>
@@ -471,8 +467,6 @@
 
   <!-- CONTACTO -->
   <section id="contacto" class="animado">
-    <div class="container">
-      <h2>Contacto</h2>
       <p>Estamos listos para tu próximo proyecto</p>
       <br>
       <a href="https://wa.me/573008034367" target="_blank" class="btn">
@@ -495,7 +489,7 @@
     <h3 id="modal-titulo"></h3>
     <p id="modal-descripcion"></p>
 <a id="btn-wsp" target="_blank" class="btn" href="#">
-  Cotizar este proyecto por WhatsApp
+  Consultar por WhatsApp
 </a>
   </div>
 </div>
@@ -524,22 +518,7 @@ window.onclick = (e) => {
   if (e.target == modal) modal.classList.remove("activo");
 };
 </script>
-  <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="cerrar">&times;</span>
-
-    <img id="modal-img">
-    <h3 id="modal-titulo"></h3>
-    <p id="modal-descripcion"></p>
-
-    <a id="btn-wsp" target="_blank" class="btn">
-      Consultar por WhatsApp
-    </a>
-  </div>
-</div>
-<script>
-<script>
-function abrirModal(titulo, descripcion, imagen, info) {
+  function abrirModal(titulo, descripcion, imagen, info) {
   const modal = document.getElementById("modal");
 
   document.getElementById("modal-img").src = imagen;
