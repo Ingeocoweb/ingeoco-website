@@ -1,220 +1,1218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>INGEOCO S.A.S</title>
+<meta name="description" content="INGEOCO S.A.S - Ingeniería geotécnica, estudios de suelos, interventoría y control de calidad en Colombia.">
+<meta name="keywords" content="ingeniería civil, geotecnia, estudios de suelos, interventoría, Barranquilla">
+<meta name="author" content="INGEOCO S.A.S">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<!-- SEO -->
-<title>INGEOCO S.A.S | Ingeniería Geotécnica en Colombia</title>
-<meta name="description" content="Empresa de ingeniería geotécnica en Colombia. Estudios de suelos, interventoría, control de calidad y consultoría técnica.">
+    body {
+      padding-top: 70px;
+      background: #f5f5f5;
+    }
 
-<!-- FUENTE -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
 
-<style>
+    nav a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: #333;
+      font-weight: bold;
+    }
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#f5f5f5;}
+    nav a:hover {
+      color: #d67a2f;
+    }
 
-/* NAV */
-nav{
-position:fixed;top:0;width:100%;background:#fff;
-display:flex;justify-content:space-between;align-items:center;
-padding:15px 40px;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:1000;
-}
-nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:600;}
-nav a:hover{color:#d67a2f;}
+    /* HERO */
+    
+   .hero {
+  height: 80vh;
+  background: 
+    linear-gradient(rgba(13,35,64,0.85), rgba(13,35,64,0.85)),
+    url("https://images.unsplash.com/photo-1581092160607-ee22731b2a5c") center/cover no-repeat;
 
-/* HERO */
-.hero{
-height:90vh;
-background:linear-gradient(rgba(13,35,64,0.85), rgba(13,35,64,0.85)),
-url("https://images.unsplash.com/photo-1581092160607-ee22731b2a5c") center/cover;
-display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
-}
-.hero h1{font-size:42px;margin-bottom:15px;}
-.hero p{margin-bottom:20px;}
-
-.btn{
-background:#d67a2f;color:#fff;padding:12px 25px;
-border-radius:25px;text-decoration:none;font-weight:bold;
-transition:0.3s;
-}
-.btn:hover{transform:scale(1.05);}
-
-/* SECCIONES */
-section{padding:80px 20px;}
-.container{max-width:1100px;margin:auto;}
-h2{text-align:center;margin-bottom:30px;color:#0d2340;}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-/* CARDS */
-.card{
-background:#fff;padding:20px;border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-.card:hover{transform:translateY(-5px);}
-
-/* PROYECTOS */
-.img-container{position:relative;overflow:hidden;border-radius:10px;}
-.img-container img{width:100%;height:200px;object-fit:cover;}
-.overlay{
-position:absolute;top:0;width:100%;height:100%;
-background:rgba(0,0,0,0.5);color:#fff;
-display:flex;align-items:center;justify-content:center;
-opacity:0;transition:0.3s;
-}
-.img-container:hover .overlay{opacity:1;}
-
-/* MODAL */
-.modal{
-display:none;position:fixed;top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,0.8);justify-content:center;align-items:center;
-z-index:2000;
-}
-.modal.activo{display:flex;}
-.modal-content{
-background:#fff;padding:20px;border-radius:10px;max-width:500px;width:90%;
-}
-.cerrar{cursor:pointer;font-size:20px;float:right;}
-
-/* CTA */
-.cta-final{
-background:#0d2340;color:#fff;text-align:center;padding:60px;
-}
-.btn-cta{
-background:#28a745;color:#fff;padding:15px 30px;
-border-radius:30px;text-decoration:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
-/* FOOTER */
-footer{
-background:#0d2340;color:#fff;text-align:center;padding:15px;
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #d67a2f;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+
+    /* SECCIONES */
+   section {
+  padding: 90px 20px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:#fff;width:55px;height:55px;
-border-radius:50%;display:flex;align-items:center;justify-content:center;
-text-decoration:none;font-size:26px;
+    ..container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-</style>
+   h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #0d2340;
+  text-align: center;
+}
+
+h3 {
+  color: #0d2340;
+}
+
+    /* GRID */
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+}
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    
+   .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+    /* CONTACTO */
+    .contacto {
+      background: #ffffff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d2340;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+.proyecto {
+  text-align: left;
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.proyecto h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: #555;
+}
+
+.dato {
+  font-size: 13px;
+  color: #888;
+}
+.tecnico {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #d67a2f, #a85f28);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+  .animado {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  .card .btn {
+  display: inline-block;
+  margin-top: 10px;
+}
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.activo {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  animation: aparecer 0.3s ease;
+  text-align: left;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.cerrar {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+  h3 {
+  margin-top: 40px;
+  color: #0d2340;
+}
+  .detalle {
+  font-size: 13px;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.resultado {
+  font-size: 13px;
+  color: #0d2340;
+  font-weight: bold;
+  margin-top: 5px;
+}
+  .card.proyecto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card.proyecto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+  .stats .card {
+  text-align: center;
+}
+
+.stats h2 {
+  color: #d67a2f;
+  font-size: 28px;
+}
+    .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+    section p {
+  max-width: 800px;
+  margin: 10px auto;
+  color: #555;
+  line-height: 1.6;
+}
+    /* NOSOTROS PRO */
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.nosotros-texto {
+  text-align: left;
+}
+
+.nosotros-texto p {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.nosotros-cajas {
+  margin-top: 20px;
+}
+
+.caja {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nosotros-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-texto {
+    text-align: center;
+  }
+}
+    /* CLIENTES PRO */
+.clientes-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.logo {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+    .metricas {
+  background: #0d2340;
+  color: white;
+  text-align: center;
+}
+
+.card-metrica {
+  padding: 20px;
+}
+
+.card-metrica h2 {
+  font-size: 40px;
+  color: #d67a2f;
+}
+
+.card-metrica p {
+  font-size: 14px;
+}
+    .porque {
+  background: #ffffff;
+  text-align: center;
+}
+
+.card-porque {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  border-left: 5px solid #d67a2f;
+  transition: transform 0.3s ease;
+}
+
+.card-porque:hover {
+  transform: translateY(-5px);
+}
+
+.card-porque h3 {
+  margin-bottom: 10px;
+  color: #0d2340;
+}
+
+.card-porque p {
+  font-size: 14px;
+  color: #555;
+}
+    .testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card-testimonio {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  font-style: italic;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.card-testimonio p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.card-testimonio h4 {
+  color: #0d2340;
+  font-style: normal;
+}
+    .card-testimonio::before {
+  content: "“";
+  font-size: 40px;
+  color: #d67a2f;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+    /* CONTACTO PRO */
+.contacto-pro .sub {
+  max-width: 600px;
+  margin: 10px auto 30px;
+  color: #555;
+}
+
+..contacto-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  text-align: center;
+}
+
+.contacto-info {
+  text-align: left;
+}
+
+.contacto-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-info li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contacto-accion {
+  text-align: center;
+}
+
+.btn-grande {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #25D366;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-grande:hover {
+  transform: scale(1.05);
+}
+
+.nota {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contacto-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contacto-info {
+    text-align: center;
+  }
+}
+    .card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+      nav {
+  backdrop-filter: blur(6px);
+}
+      html {
+  scroll-behavior: smooth;
+}
+      .contacto-info {
+  text-align: center;
+}
+  .nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.nosotros-grid img {
+  width: 100%;
+  border-radius: 12px;
+}  
+      /* NOSOTROS PRO */
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.nosotros-texto h2 {
+  margin-bottom: 20px;
+  color: #0d2340;
+}
+
+.nosotros-texto p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.nosotros-bloques {
+  margin-top: 25px;
+}
+
+.nosotros-bloques .item {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.nosotros-bloques h4 {
+  margin-bottom: 5px;
+  color: #0d2340;
+}
+
+.nosotros-img img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+      @media (max-width: 768px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-img {
+    order: -1;
+  }
+}
+    section {
+  width: 100%;
+}
+
+section .container {
+  text-align: center;
+}
+    body {
+  overflow-x: hidden;
+}
+  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-<div><strong>INGEOCO</strong></div>
-<div>
-<a href="#servicios">Servicios</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#contacto">Contacto</a>
+  <!-- NAV -->
+  <nav>
+   <div>
+  <img src="logo.png" alt="INGEOCO" style="height:40px;">
 </div>
-</nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-<div>
-<h1>Reducimos riesgos en tus proyectos de ingeniería</h1>
-<p>Especialistas en geotecnia e interventoría</p>
-<a href="https://wa.me/573008034367" class="btn">Cotizar ahora</a>
-</div>
+  <!-- HERO -->
+  
+    <section class="hero">
+    <div>
+      <h1>Reducimos riesgos y garantizamos calidad en tus proyectos de ingeniería</h1>
+<p>Especialistas en geotecnia, interventoría y control técnico en Colombia</p>
+      <a href="https://wa.me/573008034367" target="_blank" class="btn">
+  Cotizar proyecto ahora
+</a>
+    </div>
+  </section>
+  <section class="stats animado">
+  <div class="container grid">
+    <div class="card">
+      <h2>+120</h2>
+      <p>Proyectos ejecutados</p>
+    </div>
+    <div class="card">
+      <h2>+10</h2>
+      <p>Años de experiencia</p>
+    </div>
+    <div class="card">
+      <h2>+50</h2>
+      <p>Clientes satisfechos</p>
+    </div>
+    <div class="card">
+      <h2>100%</h2>
+      <p>Cumplimiento técnico</p>
+    </div>
+  </div>
+</section>
+  <!-- NOSOTROS PRO -->
+<section class="animado">
+  <div class="container">
+
+ <section id="nosotros" class="animado">
+  <div class="container nosotros-grid">
+
+    <!-- TEXTO -->
+    <div class="nosotros-texto">
+      <h2>Sobre Nosotros</h2>
+
+      <p>
+        En <strong>INGEOCO S.A.S</strong> desarrollamos soluciones en ingeniería civil y geotécnica
+        orientadas a la estabilidad, seguridad y eficiencia de los proyectos.
+      </p>
+
+      <p>
+        Contamos con más de 10 años de experiencia en estudios, diseños,
+        interventoría y control de calidad, participando en proyectos de
+        infraestructura y urbanismo en la región.
+      </p>
+
+      <div class="nosotros-bloques">
+        <div class="item">
+          <h4>✔ Enfoque técnico</h4>
+          <p>Aplicación de normativas y criterios de ingeniería en cada proyecto.</p>
+        </div>
+
+        <div class="item">
+          <h4>✔ Compromiso</h4>
+          <p>Responsabilidad y precisión en cada fase constructiva.</p>
+        </div>
+
+        <div class="item">
+          <h4>✔ Experiencia</h4>
+          <p>Participación en múltiples proyectos de infraestructura.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="nosotros-img">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop" alt="Ingeniería civil">
+    </div>
+
+  </div>
 </section>
 
-<!-- SERVICIOS -->
-<section id="servicios">
-<div class="container">
-<h2>Servicios</h2>
-<div class="grid">
-<div class="card">Estudios de suelos</div>
-<div class="card">Interventoría</div>
-<div class="card">Control de calidad</div>
-<div class="card">Consultoría técnica</div>
+
+  <!-- SERVICIOS -->
+  <div style="text-align:center; margin-top:20px;">
+  <a href="https://wa.me/573008034367" target="_blank" class="btn">
+    Solicitar asesoría técnica
+  </a>
 </div>
-</div>
+  <section id="servicios" class="animado">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="grid">
+        <div class="card">Construcción</div>
+        <div class="card">Interventoría</div>
+        <div class="card">Formulación de proyectos</div>
+        <div class="card">Estudios y diseños</div>
+        <div class="card">Consultoría</div>
+        <div class="card">Control de calidad</div>
+      </div>
+    </div>
+  </section>
+  <section class="animado">
+  <div class="container">
+    <h2>¿Por qué elegirnos?</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Experiencia comprobada</h3>
+        <p>Más de 10 años ejecutando proyectos de ingeniería civil y geotécnica.</p>
+      </div>
+
+      <div class="card">
+        <h3>Enfoque técnico</h3>
+        <p>Aplicamos normativas y control de calidad en cada etapa del proyecto.</p>
+      </div>
+
+      <div class="card">
+        <h3>Resultados garantizados</h3>
+        <p>Optimización de costos y cumplimiento de especificaciones técnicas.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- PROYECTOS -->
-<section id="proyectos">
-<div class="container">
-<h2>Proyectos</h2>
+ <!-- PROYECTOS -->
+  <section class="animado">
+  <div class="container">
+    <h2>Resultados que generan confianza</h2>
+    <p>
+      Hemos participado en proyectos de infraestructura, urbanismo y control de calidad,
+      garantizando cumplimiento técnico, optimización de recursos y seguridad en obra.
+    </p>
 
-<div class="grid">
-
-<div class="card proyecto" onclick="abrirModal('Proyecto vial','Proyecto en Barranquilla')">
-<div class="img-container">
-<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-<div class="overlay">Ver más</div>
-</div>
-<h3>Proyecto vial</h3>
-</div>
-
-<div class="card proyecto" onclick="abrirModal('Urbanismo','Control de calidad')">
-<div class="img-container">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<div class="overlay">Ver más</div>
-</div>
-<h3>Urbanismo</h3>
-</div>
-
-</div>
-</div>
+    <a href="https://wa.me/573008034367" target="_blank" class="btn">
+      Consultar mi proyecto
+    </a>
+  </div>
 </section>
+<section id="proyectos" class="animado">
+   <div class="container">
 
-<!-- CONTACTO -->
-<section id="contacto">
-<div class="container">
-<h2>Contacto</h2>
-<p style="text-align:center;">Habla con un ingeniero ahora</p>
-<div style="text-align:center;margin-top:20px;">
-<a href="https://wa.me/573008034367" class="btn">WhatsApp</a>
+    <h2>Proyectos</h2>
+
+    
+    <div class="grid">
+
+    <!-- Proyecto 1 -->
+<div class="card proyecto"
+     data-titulo="Ampliación Avenida Circunvalar"
+     data-img="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77"
+     data-desc="Estudios, diseños, control de calidad y supervisión técnica en obra civil"
+     data-wsp="Hola, quiero información sobre la Ampliación Avenida Circunvalar">
+  <div class="img-container">
+    <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=800&auto=format&fit=crop">
+    <div class="overlay">
+      <span>Ver detalles</span>
+    </div>
+  </div>
+
+  <h3>Ampliación Avenida Circunvalar</h3>
+<p class="tecnico">Estudios, diseños, control de calidad y supervisión técnica en obra civil</p>
+
+  <p class="dato">
+        📍 Barranquilla, Atlántico | 🏗️ Infraestructura vial
+  </p>
+  <p class="detalle">
+✔ Control de calidad ensayos de materiales (suelos, pavimentos, concretos y asfalto)<br>
+✔ Estudios y diseños infraestructura (topografía, suelos, estructural, hidráulico, geométrico)<br>
+✔ Supervisión de procesos constructivos
+</p>
+
+<p class="resultado">
+Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del proyecto.
+</p>
+  <a href="https://wa.me/573008034367?text=Hola,%20quiero%20información%20sobre%20la%20Ampliación%20Avenida%20Circunvalar"
+   target="_blank"
+   class="btn">
+   Consultar proyecto
+</a>
 </div>
+
+<!-- Proyecto 2 -->
+<div class="card proyecto"
+     data-titulo="Barrios a la Obra Módulo VIII"
+     data-img="URL_IMAGEN"
+     data-desc="Estudios, diseños, acompañamiento técnico y control de calidad"
+     data-wsp="Hola, quiero información sobre Barrios a la Obra Módulo VIII">
+  <div class="img-container">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop">
+    <div class="overlay">
+      <span>Ver detalles</span>
+    </div>
+  </div>
+
+ <h3>Barrios a la Obra – Módulo VIII</h3>
+<p class="tecnico">Estudios, diseños, acompañamiento técnico y control de calidad</p>
+
+  <p class="dato">
+    
+    📍 Barranquilla, Atlántico | 🧱 Obras urbanas
+  </p>
+  <p class="detalle">
+✔ Control de calidad ensayos de materiales (suelos, pavimentos, concretos y asfalto)<br>
+✔ Estudios y diseños infraestructura (topografía, suelos, estructural, hidráulico, geométrico)<br>
+✔ Supervisión de procesos constructivos
+</p>
+
+<p class="resultado">
+Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del proyecto.
+</p>
+  <a href="https://wa.me/573008034367?text=Hola,%20quiero%20información%20sobre%20la%20Barrios%20a la obra%20ModuloVIII"
+   target="_blank"
+   class="btn">
+   Consultar proyecto
+</a>
 </div>
+
+<!-- Proyecto 3 -->
+<div class="card proyecto"
+     data-titulo="Condominios Campestres"
+     data-img="URL_IMAGEN"
+     data-desc="Estudios, diseños, asesorías y control de calidad"
+     data-wsp="Hola, quiero información sobre Barrios a la Obra Módulo VIII">
+  <div class="img-container">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop">
+    <div class="overlay">
+      <span>Ver detalles</span>
+    </div>
+  </div>
+
+  <h3>Condominios Campestres</h3>
+<p class="tecnico">Estudios, diseños, asesorías y control de calidad</p>
+
+  <p class="dato">
+       📍 Región Caribe | 🏡 Infraestructura general
+  </p>
+   <p class="detalle">
+✔ Control de calidad ensayos de materiales (suelos, pavimentos, concretos y asfalto)<br>
+✔ Estudios y diseños infraestructura (suelos y geométrico)<br>
+✔ Construcción y transporte de materiales
+</p>
+
+<p class="resultado">
+Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del proyecto.
+</p>
+  <a href="https://wa.me/573008034367?text=Hola,%20quiero%20información%20sobre%20la%20Infraestructura General%20 Condominios%20Campestres"
+   target="_blank"
+   class="btn">
+   Consultar proyecto
+</a>
+</div>
+
+    </div>
+  </div>
 </section>
+<section class="metricas">
+  <div class="container">
+    <div class="grid">
 
-<!-- CTA -->
-<section class="cta-final">
-<h2>¿Listo para tu proyecto?</h2>
-<a href="https://wa.me/573008034367" class="btn-cta">Contactar</a>
+      <div class="card-metrica">
+        <h2 class="contador" data-target="120">0</h2>
+        <p>Proyectos ejecutados</p>
+      </div>
+
+      <div class="card-metrica">
+        <h2 class="contador" data-target="10">0</h2>
+        <p>Años de experiencia</p>
+      </div>
+
+      <div class="card-metrica">
+        <h2 class="contador" data-target="30">0</h2>
+        <p>Clientes satisfechos</p>
+      </div>
+
+      <div class="card-metrica">
+        <h2 class="contador" data-target="100">0</h2>
+        <p>% Cumplimiento</p>
+      </div>
+
+    </div>
+  </div>
 </section>
+    <section class="porque animado">
+  <div class="container">
+    <h2>¿Por qué elegirnos?</h2>
 
-<footer>
-© 2026 INGEOCO S.A.S
-</footer>
+    <div class="grid">
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-<div class="modal-content">
-<span class="cerrar" onclick="cerrarModal()">✖</span>
-<h3 id="titulo"></h3>
-<p id="desc"></p>
+      <div class="card-porque">
+        <h3>✔ Experiencia comprobada</h3>
+        <p>Más de 10 años ejecutando proyectos de infraestructura y geotecnia en la región Caribe.</p>
+      </div>
+
+      <div class="card-porque">
+        <h3>✔ Control de calidad riguroso</h3>
+        <p>Aplicamos ensayos y seguimiento técnico que garantizan cumplimiento de normas y seguridad.</p>
+      </div>
+
+      <div class="card-porque">
+        <h3>✔ Acompañamiento técnico</h3>
+        <p>Estamos presentes en cada etapa del proyecto: diseño, ejecución y supervisión.</p>
+      </div>
+
+      <div class="card-porque">
+        <h3>✔ Cumplimiento y confianza</h3>
+        <p>Entregamos resultados medibles, optimizando costos y tiempos de ejecución.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section class="testimonios animado">
+  <div class="container">
+    <h2>Lo que dicen nuestros clientes</h2>
+
+    <div class="grid">
+
+      <div class="card-testimonio">
+        <p>
+          “INGEOCO demostró un alto nivel técnico en el control de calidad de nuestro proyecto vial. Cumplieron con todos los tiempos establecidos.”
+        </p>
+        <h4>— CONTECSA S.A.S</h4>
+      </div>
+
+      <div class="card-testimonio">
+        <p>
+          “El acompañamiento técnico fue clave para garantizar la estabilidad del proyecto. Excelente equipo de trabajo.”
+        </p>
+        <h4>— EL POBLADO S.A</h4>
+      </div>
+
+      <div class="card-testimonio">
+        <p>
+          “Destacamos su compromiso y precisión en los estudios de suelos. Recomendados totalmente.”
+        </p>
+        <h4>— SIL SOLUCIONES S.A.S</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- CLIENTES -->
+  <section id="clientes" class="animado">
+    <div class="container">
+      <h2>Clientes</h2>
+      <div class="clientes-logos">
+
+  <div class="logo">
+    <img src="https://via.placeholder.com/150x80?text=CONTECSA" alt="CONTECSA">
+  </div>
+
+  <div class="logo">
+    <img src="https://via.placeholder.com/150x80?text=EL+POBLADO" alt="EL POBLADO">
+  </div>
+
+  <div class="logo">
+    <img src="https://via.placeholder.com/150x80?text=SIL+SOLUCIONES" alt="SIL SOLUCIONES">
+  </div>
+
+  <div class="logo">
+    <img src="https://via.placeholder.com/150x80?text=SERCIMEC" alt="SERCIMEC">
+  </div>
 </div>
+    </div>
+  </section>
+<section class="animado">
+  <div class="container">
+    <h2>Lo que dicen nuestros clientes</h2>
+
+    <div class="grid">
+      <div class="card">
+        <p>"Excelente control de calidad y cumplimiento en obra."</p>
+        <strong>- Cliente sector construcción</strong>
+      </div>
+
+      <div class="card">
+        <p>"Acompañamiento técnico profesional en todo el proyecto."</p>
+        <strong>- Empresa urbanística</strong>
+      </div>
+
+      <div class="card">
+        <p>"Resultados confiables en estudios y diseños."</p>
+        <strong>- Contratista regional</strong>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- CONTACTO -->
+  <section class="animado">
+    <h2>¿Tienes un proyecto en marcha?</h2>
+    <p>
+      Evita sobrecostos y errores técnicos. Recibe acompañamiento profesional desde el inicio.
+    </p>
+
+    <a href="https://wa.me/573008034367" target="_blank" class="btn">
+      Hablar con un ingeniero ahora
+    </a>
+ </section>
+  <section id="contacto" class="animado">
+    <div class="container contacto-pro">
+
+  <h2>Hablemos de tu proyecto</h2>
+
+  <p class="sub">
+    Evita errores técnicos, sobrecostos y retrasos en obra.  
+    Recibe acompañamiento profesional desde la etapa inicial.
+  </p>
+
+  <div class="contacto-box">
+
+    <div class="contacto-info">
+      <h3>¿Por qué contactarnos?</h3>
+
+      <ul>
+        <li>✔ Asesoría técnica especializada</li>
+        <li>✔ Respuesta rápida</li>
+        <li>✔ Soluciones ajustadas a tu proyecto</li>
+      </ul>
+    </div>
+
+    <div class="contacto-accion">
+      <a href="https://wa.me/573008034367" target="_blank" class="btn-grande">
+        📲 Hablar con un ingeniero ahora
+      </a>
+
+      <p class="nota">
+        Te responderemos lo antes posible.
+      </p>
+    </div>
+
+  </div>
+
 </div>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 INGEOCO S.A.S - Ingeniería Geotécnica y Consultoría
+  </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/573008034367" class="whatsapp">💬</a>
 
+<!-- MODAL PROYECTOS -->
 <script>
-function abrirModal(titulo,desc){
-document.getElementById("modal").classList.add("activo");
-document.getElementById("titulo").innerText=titulo;
-document.getElementById("desc").innerText=desc;
-}
-function cerrarModal(){
-document.getElementById("modal").classList.remove("activo");
-}
-</script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const modalTitulo = document.getElementById("modal-titulo");
+const modalDesc = document.getElementById("modal-descripcion");
+const cerrar = document.querySelector(".cerrar");
 
+document.querySelectorAll(".proyecto").forEach(card => {
+  card.addEventListener("click", () => {
+   modal.classList.add("activo");
+    modalImg.src = card.querySelector("img").src;
+    modalTitulo.innerText = card.querySelector("h3").innerText;
+    modalDesc.innerText = card.querySelector(".descripcion").innerText;
+    const texto = `Hola, estoy interesado en el proyecto: ${titulo}`;
+  "https://wa.me/573008034367?text=" + encodeURIComponent(texto);
+  });
+});
+
+cerrar.onclick = () => modal.style.display = "none";
+
+window.onclick = (e) => {
+  if (e.target == modal) modal.classList.remove("activo");
+};
+</script>
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
+
+    <img id="modal-img">
+    <h3 id="modal-titulo"></h3>
+    <p id="modal-descripcion"></p>
+
+    <a id="btn-wsp" target="_blank" class="btn">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</div>
+<script>
+function abrirModal(titulo, descripcion, imagen, info) {
+  const modal = document.getElementById("modal");
+
+  document.getElementById("modal-img").src = imagen;
+  document.getElementById("modal-titulo").innerText = titulo;
+  document.getElementById("modal-descripcion").innerText =
+    descripcion + " | " + info;
+
+  const mensaje = `Hola, estoy interesado en el proyecto: ${titulo}`;
+  const numero = "573008034367";
+
+  document.getElementById("btn-wsp").href =
+    `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+  modal.classList.add("activo");
+}
+
+// cerrar
+document.querySelector(".cerrar").onclick = () => {
+  document.getElementById("modal").classList.remove("activo");
+};
+
+window.onclick = (e) => {
+  const modal = document.getElementById("modal");
+  if (e.target === modal) {
+    modal.classList.remove("activo");
+  }
+};
+
+// animaciones
+const elementos = document.querySelectorAll('.animado');
+
+function mostrarElementos() {
+  const trigger = window.innerHeight * 0.85;
+
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < trigger) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', mostrarElementos);
+window.addEventListener('load', mostrarElementos);
+  const contadores = document.querySelectorAll('.contador');
+
+const activarContadores = () => {
+  contadores.forEach(contador => {
+    const target = +contador.getAttribute('data-target');
+    const incremento = target / 100;
+
+    let count = 0;
+
+    const actualizar = () => {
+      count += incremento;
+      if (count < target) {
+        contador.innerText = Math.floor(count);
+        requestAnimationFrame(actualizar);
+      } else {
+        contador.innerText = target;
+      }
+    };
+
+    actualizar();
+  });
+};
+
+window.addEventListener('load', activarContadores);
+</script>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/573008034367" 
+   class="whatsapp-float" 
+   target="_blank">
+   💬
+</a>
 </body>
 </html>
