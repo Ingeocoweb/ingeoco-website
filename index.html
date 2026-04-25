@@ -328,6 +328,51 @@
   color: #555;
   line-height: 1.6;
 }
+    /* NOSOTROS PRO */
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.nosotros-texto {
+  text-align: left;
+}
+
+.nosotros-texto p {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.nosotros-cajas {
+  margin-top: 20px;
+}
+
+.caja {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nosotros-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-texto {
+    text-align: center;
+  }
+}
   </style>
 </head>
 
@@ -380,42 +425,47 @@
 <section class="animado">
   <div class="container">
 
-    <h2>Sobre Nosotros</h2>
+  <section class="animado nosotros">
+  <div class="container nosotros-grid">
 
-    <p>
-      En <strong>INGEOCO S.A.S</strong> somos una empresa especializada en ingeniería civil y geotécnica,
-      enfocada en brindar soluciones técnicas confiables que garantizan la estabilidad,
-      seguridad y viabilidad de los proyectos.
-    </p>
+    <!-- TEXTO -->
+    <div class="nosotros-texto">
+      <h2>Sobre Nosotros</h2>
 
-    <p>
-      Contamos con más de 10 años de experiencia participando en proyectos de infraestructura,
-      urbanismo y control de calidad, aportando conocimiento técnico en cada etapa del proceso constructivo.
-    </p>
+      <p>
+        En <strong>INGEOCO S.A.S</strong> desarrollamos soluciones en ingeniería civil y geotécnica
+        orientadas a la estabilidad, seguridad y eficiencia de los proyectos.
+      </p>
 
-    <div class="grid">
+      <p>
+        Contamos con más de 10 años de experiencia en estudios, diseños,
+        interventoría y control de calidad, participando en proyectos de infraestructura
+        y urbanismo en la región.
+      </p>
 
-      <div class="card">
-        <h3>Enfoque técnico</h3>
-        <p>
-          Aplicamos metodologías basadas en normativas y estándares para asegurar resultados confiables.
-        </p>
+      <div class="nosotros-cajas">
+
+        <div class="caja">
+          <h4>✔ Enfoque técnico</h4>
+          <p>Aplicación de normativas y criterios de ingeniería en cada proyecto.</p>
+        </div>
+
+        <div class="caja">
+          <h4>✔ Compromiso</h4>
+          <p>Responsabilidad y precisión en cada fase constructiva.</p>
+        </div>
+
+        <div class="caja">
+          <h4>✔ Experiencia</h4>
+          <p>Participación en múltiples proyectos de infraestructura.</p>
+        </div>
+
       </div>
+    </div>
 
-      <div class="card">
-        <h3>Compromiso</h3>
-        <p>
-          Trabajamos con responsabilidad y precisión, entendiendo el impacto de cada decisión en obra.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Experiencia</h3>
-        <p>
-          Participación en proyectos de مختلف tipos, aportando valor en estudios, diseños y ejecución.
-        </p>
-      </div>
-
+    <!-- IMAGEN -->
+    <div class="nosotros-img">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22731b2a5c?q=80&w=800&auto=format&fit=crop">
     </div>
 
   </div>
