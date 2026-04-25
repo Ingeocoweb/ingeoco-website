@@ -3,133 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INGEOCO S.A.S</title>
+
+<!-- SEO -->
+<title>INGEOCO S.A.S | Ingeniería Geotécnica en Colombia</title>
+<meta name="description" content="Empresa de ingeniería geotécnica en Colombia. Estudios de suelos, interventoría, control de calidad y consultoría técnica.">
+
+<!-- FUENTE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
 /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  padding-top: 70px;
-  background: #f5f5f5;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f5f5f5;}
 
 /* NAV */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
+nav{
+position:fixed;top:0;width:100%;background:#fff;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 40px;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:1000;
 }
-
-nav a {
-  text-decoration: none;
-  margin-left: 20px;
-  color: #333;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #d67a2f;
-}
+nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:600;}
+nav a:hover{color:#d67a2f;}
 
 /* HERO */
-.hero {
-  height: 80vh;
-  background: linear-gradient(rgba(13,35,64,0.85), rgba(13,35,64,0.85)),
-  url("https://images.unsplash.com/photo-1581092160607-ee22731b2a5c") center/cover no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+.hero{
+height:90vh;
+background:linear-gradient(rgba(13,35,64,0.85), rgba(13,35,64,0.85)),
+url("https://images.unsplash.com/photo-1581092160607-ee22731b2a5c") center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
 }
+.hero h1{font-size:42px;margin-bottom:15px;}
+.hero p{margin-bottom:20px;}
 
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
+.btn{
+background:#d67a2f;color:#fff;padding:12px 25px;
+border-radius:25px;text-decoration:none;font-weight:bold;
+transition:0.3s;
 }
-
-.hero p {
-  margin-bottom: 20px;
-}
-
-/* BOTONES */
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #d67a2f;
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
-}
+.btn:hover{transform:scale(1.05);}
 
 /* SECCIONES */
-section {
-  padding: 80px 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #0d2340;
-}
+section{padding:80px 20px;}
+.container{max-width:1100px;margin:auto;}
+h2{text-align:center;margin-bottom:30px;color:#0d2340;}
 
 /* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-/* CARD */
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+/* CARDS */
+.card{
+background:#fff;padding:20px;border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:0.3s;
 }
+.card:hover{transform:translateY(-5px);}
 
-/* CTA FINAL */
-.cta-final {
-  background: #0d2340;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
+/* PROYECTOS */
+.img-container{position:relative;overflow:hidden;border-radius:10px;}
+.img-container img{width:100%;height:200px;object-fit:cover;}
+.overlay{
+position:absolute;top:0;width:100%;height:100%;
+background:rgba(0,0,0,0.5);color:#fff;
+display:flex;align-items:center;justify-content:center;
+opacity:0;transition:0.3s;
 }
+.img-container:hover .overlay{opacity:1;}
 
-.btn-cta {
-  background: #28a745;
-  padding: 15px 30px;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
+/* MODAL */
+.modal{
+display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.8);justify-content:center;align-items:center;
+z-index:2000;
+}
+.modal.activo{display:flex;}
+.modal-content{
+background:#fff;padding:20px;border-radius:10px;max-width:500px;width:90%;
+}
+.cerrar{cursor:pointer;font-size:20px;float:right;}
+
+/* CTA */
+.cta-final{
+background:#0d2340;color:#fff;text-align:center;padding:60px;
+}
+.btn-cta{
+background:#28a745;color:#fff;padding:15px 30px;
+border-radius:30px;text-decoration:none;
 }
 
 /* FOOTER */
-footer {
-  background: #0d2340;
-  color: white;
-  text-align: center;
-  padding: 15px;
+footer{
+background:#0d2340;color:#fff;text-align:center;padding:15px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:#fff;width:55px;height:55px;
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+text-decoration:none;font-size:26px;
 }
 
 </style>
@@ -139,101 +115,106 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div>
-    <img src="logo.png" alt="INGEOCO" style="height:40px;">
-  </div>
-
-  <div>
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#clientes">Clientes</a>
-    <a href="#contacto">Contacto</a>
-  </div>
+<div><strong>INGEOCO</strong></div>
+<div>
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Reducimos riesgos y garantizamos calidad en tus proyectos</h1>
-    <p>Especialistas en geotecnia e interventoría</p>
-
-    <a href="https://wa.me/573008034367" target="_blank" class="btn">
-      Cotizar proyecto
-    </a>
-  </div>
+<div>
+<h1>Reducimos riesgos en tus proyectos de ingeniería</h1>
+<p>Especialistas en geotecnia e interventoría</p>
+<a href="https://wa.me/573008034367" class="btn">Cotizar ahora</a>
+</div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios">
-  <div class="container">
-    <h2>Servicios</h2>
-
-    <div class="grid">
-      <div class="card">Construcción</div>
-      <div class="card">Interventoría</div>
-      <div class="card">Consultoría</div>
-      <div class="card">Estudios y diseños</div>
-    </div>
-  </div>
+<div class="container">
+<h2>Servicios</h2>
+<div class="grid">
+<div class="card">Estudios de suelos</div>
+<div class="card">Interventoría</div>
+<div class="card">Control de calidad</div>
+<div class="card">Consultoría técnica</div>
+</div>
+</div>
 </section>
 
 <!-- PROYECTOS -->
 <section id="proyectos">
-  <div class="container">
-    <h2>Proyectos</h2>
+<div class="container">
+<h2>Proyectos</h2>
 
-    <div class="grid">
-      <div class="card">Proyecto 1</div>
-      <div class="card">Proyecto 2</div>
-      <div class="card">Proyecto 3</div>
-    </div>
-  </div>
-</section>
+<div class="grid">
 
-<!-- CLIENTES -->
-<section id="clientes">
-  <div class="container">
-    <h2>Clientes</h2>
+<div class="card proyecto" onclick="abrirModal('Proyecto vial','Proyecto en Barranquilla')">
+<div class="img-container">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<div class="overlay">Ver más</div>
+</div>
+<h3>Proyecto vial</h3>
+</div>
 
-    <div class="grid">
-      <div class="card">Cliente 1</div>
-      <div class="card">Cliente 2</div>
-      <div class="card">Cliente 3</div>
-    </div>
-  </div>
+<div class="card proyecto" onclick="abrirModal('Urbanismo','Control de calidad')">
+<div class="img-container">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+<div class="overlay">Ver más</div>
+</div>
+<h3>Urbanismo</h3>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-  <div class="container">
-    <h2>Contacto</h2>
-
-    <p style="text-align:center;">
-      Escríbenos para asesorarte en tu proyecto
-    </p>
-
-    <div style="text-align:center; margin-top:20px;">
-      <a href="https://wa.me/573008034367" target="_blank" class="btn">
-        Hablar por WhatsApp
-      </a>
-    </div>
-  </div>
+<div class="container">
+<h2>Contacto</h2>
+<p style="text-align:center;">Habla con un ingeniero ahora</p>
+<div style="text-align:center;margin-top:20px;">
+<a href="https://wa.me/573008034367" class="btn">WhatsApp</a>
+</div>
+</div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- CTA -->
 <section class="cta-final">
-  <h2>¿Listo para avanzar?</h2>
-  <p>Recibe asesoría técnica profesional</p>
-
-  <a href="https://wa.me/573008034367" target="_blank" class="btn-cta">
-    Contactar ahora
-  </a>
+<h2>¿Listo para tu proyecto?</h2>
+<a href="https://wa.me/573008034367" class="btn-cta">Contactar</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 INGEOCO S.A.S - Ingeniería Geotécnica y Consultoría
+© 2026 INGEOCO S.A.S
 </footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="cerrar" onclick="cerrarModal()">✖</span>
+<h3 id="titulo"></h3>
+<p id="desc"></p>
+</div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/573008034367" class="whatsapp">💬</a>
+
+<script>
+function abrirModal(titulo,desc){
+document.getElementById("modal").classList.add("activo");
+document.getElementById("titulo").innerText=titulo;
+document.getElementById("desc").innerText=desc;
+}
+function cerrarModal(){
+document.getElementById("modal").classList.remove("activo");
+}
+</script>
 
 </body>
 </html>
