@@ -79,20 +79,23 @@
     }
 
     /* SECCIONES */
-    section {
-      padding: 70px 20px;
-      text-align: center;
-    }
+   section {
+  padding: 90px 20px;
+}
 
     .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+  max-width: 1200px;
 
-    h2 {
-      margin-bottom: 20px;
-    }
+   h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #0d2340;
+  text-align: center;
+}
+
+h3 {
+  color: #0d2340;
+}
 
     /* GRID */
     .grid {
@@ -188,9 +191,8 @@
   color: #666;
   margin-top: 5px;
 }
-  .btn {
+.btn {
   display: inline-block;
-  margin-top: 15px;
   padding: 12px 25px;
   background: linear-gradient(135deg, #d67a2f, #a85f28);
   color: white;
@@ -198,6 +200,10 @@
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .btn:hover {
@@ -542,6 +548,21 @@
   .contacto-info {
     text-align: center;
   }
+}
+    .card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+      nav {
+  backdrop-filter: blur(6px);
+}
+      html {
+  scroll-behavior: smooth;
 }
   </style>
 </head>
