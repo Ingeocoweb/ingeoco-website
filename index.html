@@ -478,6 +478,71 @@
   top: 10px;
   left: 15px;
 }
+    /* CONTACTO PRO */
+.contacto-pro .sub {
+  max-width: 600px;
+  margin: 10px auto 30px;
+  color: #555;
+}
+
+.contacto-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.contacto-info {
+  text-align: left;
+}
+
+.contacto-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-info li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contacto-accion {
+  text-align: center;
+}
+
+.btn-grande {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #25D366;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-grande:hover {
+  transform: scale(1.05);
+}
+
+.nota {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contacto-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contacto-info {
+    text-align: center;
+  }
+}
   </style>
 </head>
 
@@ -895,16 +960,40 @@ Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del
   </div>
 </section>
   <section id="contacto" class="animado">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>Estamos listos para tu próximo proyecto</p>
-      <br>
-      <a href="https://wa.me/573008034367" target="_blank" class="btn">
-        Escríbenos por WhatsApp
-      </a>
-    </div>
-  </section>
+    <div class="container contacto-pro">
 
+  <h2>Hablemos de tu proyecto</h2>
+
+  <p class="sub">
+    Evita errores técnicos, sobrecostos y retrasos en obra.  
+    Recibe acompañamiento profesional desde la etapa inicial.
+  </p>
+
+  <div class="contacto-box">
+
+    <div class="contacto-info">
+      <h3>¿Por qué contactarnos?</h3>
+
+      <ul>
+        <li>✔ Asesoría técnica especializada</li>
+        <li>✔ Respuesta rápida</li>
+        <li>✔ Soluciones ajustadas a tu proyecto</li>
+      </ul>
+    </div>
+
+    <div class="contacto-accion">
+      <a href="https://wa.me/573008034367" target="_blank" class="btn-grande">
+        📲 Hablar con un ingeniero ahora
+      </a>
+
+      <p class="nota">
+        Te responderemos lo antes posible.
+      </p>
+    </div>
+
+  </div>
+
+</div>
   <!-- FOOTER -->
   <footer>
     © 2026 INGEOCO S.A.S - Ingeniería Geotécnica y Consultoría
