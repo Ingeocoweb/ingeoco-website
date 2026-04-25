@@ -491,11 +491,12 @@ h3 {
   color: #555;
 }
 
-.contacto-box {
+..contacto-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  text-align: center;
 }
 
 .contacto-info {
@@ -563,6 +564,9 @@ h3 {
 }
       html {
   scroll-behavior: smooth;
+}
+      .contacto-info {
+  text-align: center;
 }
   </style>
 </head>
