@@ -549,6 +549,36 @@ window.onclick = (e) => {
   </div>
 </div>
 <script>
+function abrirModal(titulo, descripcion, imagen, info) {
+  const modal = document.getElementById("modal");
+
+  document.getElementById("modal-img").src = imagen;
+  document.getElementById("modal-titulo").innerText = titulo;
+  document.getElementById("modal-descripcion").innerText =
+    descripcion + " | " + info;
+
+  const mensaje = `Hola, estoy interesado en el proyecto: ${titulo}`;
+  const numero = "573008034367";
+
+  document.getElementById("btn-wsp").href =
+    `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+  modal.classList.add("activo");
+}
+
+// cerrar
+document.querySelector(".cerrar").onclick = () => {
+  document.getElementById("modal").classList.remove("activo");
+};
+
+window.onclick = (e) => {
+  const modal = document.getElementById("modal");
+  if (e.target === modal) {
+    modal.classList.remove("activo");
+  }
+};
+
+// animaciones
 const elementos = document.querySelectorAll('.animado');
 
 function mostrarElementos() {
@@ -556,7 +586,6 @@ function mostrarElementos() {
 
   elementos.forEach(el => {
     const top = el.getBoundingClientRect().top;
-
     if (top < trigger) {
       el.classList.add('visible');
     }
