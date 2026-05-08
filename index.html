@@ -693,24 +693,27 @@ h2 {
   transform: scale(1.05);
 }
   .clientes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .clientes img {
-  width: 120px;
-  height: auto;
-  opacity: 0.8;
-  transition: 0.3s;
+    width: 160px;
+    height: 80px;
+    object-fit: contain;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
 
 .clientes img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
   </style>
 </head>
@@ -1081,7 +1084,11 @@ Resultado: Cumplimiento de especificaciones técnicas y mejora en la calidad del
     <section class="testimonios animado">
   <div class="container">
     <h2>Lo que dicen nuestros clientes</h2>
-
+<div class="clientes">
+   <img src="img/logos/clientes/contecsa.png" alt="Contecsa">
+   <img src="img/logos/clientes/el-poblado.png" alt="El Poblado">
+   <img src="img/logos/clientes/sil-soluciones.png" alt="SIL Soluciones">
+</div>
     <div class="grid">
 
       <div class="card-testimonio">
